@@ -1,0 +1,261 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+// @include foundation-accordion;
+// @include foundation-accordion-menu;
+// @include foundation-badge;
+// @include foundation-breadcrumbs;
+// @include foundation-button-group;
+// @include foundation-callout;
+@include foundation-close-button;
+// @include foundation-drilldown-menu;
+// @include foundation-dropdown;
+// @include foundation-dropdown-menu;
+// @include foundation-flex-video;
+// @include foundation-label;
+// @include foundation-media-object;
+// @include foundation-menu;
+// @include foundation-off-canvas;
+// @include foundation-orbit;
+// @include foundation-pagination;
+// @include foundation-progress-bar;
+// @include foundation-slider;
+// @include foundation-sticky;
+@include foundation-reveal;
+// @include foundation-switch;
+// @include foundation-table;
+// @include foundation-tabs;
+// @include foundation-thumbnail;
+// @include foundation-title-bar;
+// @include foundation-tooltip;
+// @include foundation-top-bar;
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+
+
+/*************************
+ * =Landing page css starts here
+ *************************/
+h3 {
+  color: $primary-color;
+}
+
+.section-padding {
+  padding: 50px 0;
+}
+
+.section-title {
+  padding: 25px 0;
+  h2 {
+    font-weight: 700;
+  }
+}
+
+.text-center {
+  @include mui-animation(fade(0,1));
+}
+
+::selection {
+  background-color: $primary-color-light;
+  color: $primary-color;
+}
+
+
+/*************************
+ * =Buttons
+ *************************/
+.large.button {
+  width: 250px;
+  margin-top: 25px;
+  text-transform: uppercase;
+}
+
+button[class=".expanded.button"] {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+button[name="sign-up-button"] {
+  text-transform: uppercase;
+  width: 200px;
+  height: 40px;
+  font-weight: bold;
+}
+
+.input-group-button {
+  .signup.button {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+/*************************
+ * =Header
+ *************************/
+.header {
+  position: relative;
+  height: 700px;
+}
+
+.header-background {
+  background: url('../img/header-background.jpg') no-repeat;
+  background-color: $primary-color-transparent;
+  background-blend-mode: overlay;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+}
+
+.header-text-area {
+  padding: 170px 0;
+  text-align: center;
+  h1 a {
+    color: $white;
+    font-weight: bold;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  p.lead {
+    padding: 10px 0;
+    margin: 20px 0;
+    color: $white;
+    font-weight: bold;
+    background-color: $primary-color-transparent;
+  }
+}
+
+.modal {
+  p {
+    color: $primary-color-dark;
+  }
+}
+
+.animation-fade-in {
+    @include mui-animation(fade(in));
+}
+
+/*************************
+ * =Features
+ *************************/
+.feature {
+  background-color: $primary-color;
+  text-align: center;
+  color: $primary-color-light;
+  min-height: 400px;
+}
+
+.core-feature {
+  text-align: center;
+  i {
+    font-size: 3.5rem;
+  }
+}
+
+.slide-in-right {
+  @include mui-animation(slide(in,right,100%));
+}
+
+.slide-in-up {
+  @include mui-animation(slide(in,down,100%));
+}
+
+.slide-in-left {
+  @include mui-animation(slide(in,left,100%));
+}
+
+/*************************
+ * =Additional Feature
+ *************************/
+.additional-feature {
+  color: $primary-color-dark;
+  background-color: $primary-color-light;
+  min-height: 350px;
+}
+
+i.fi-check {
+  padding-right: 10px;
+}
+
+.scale-in-up {
+    @include mui-animation(zoom());
+}
+
+.scale-in-up {
+    @include mui-animation(zoom());
+}
+
+/*************************
+ * =Testimonial
+ *************************/
+.testimonial {
+  h2 {
+    color: $primary-color;
+  }
+}
+
+.blockquote {
+  color: $primary-color;
+  cite {
+    font-weight: bold;
+    color: $primary-color-dark;
+  }
+}
+
+.hinge-in-from-top {
+    @include mui-animation(hinge(in));
+}
+
+/*************************
+ * =Call to Action
+ *************************/
+.call-to-action {
+  color: $primary-color-dark;
+  background-color: $primary-color-light;
+}
+
+/*************************
+ * =Footer
+ *************************/
+.footer {
+  background-color: $primary-color-dark;
+  color: $primary-color-light;
+  a {
+    color: $primary-color-light;
+    &:hover {
+      color: $white;
+      font-weight: bold;
+    }
+  }
+  p {
+    padding-top: 15px;
+  }
+}
+
+ul.app-links {
+  list-style-type: none;
+  float: right;
+  font-size: 2.5rem;
+  li {
+    display: inline-block;
+    padding-left: 10px;
+  }
+}
